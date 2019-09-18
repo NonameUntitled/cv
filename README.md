@@ -1,2 +1,4 @@
 # my-resume
-Repository with my CV(Resume)
+In this repo you might find:
+  - Russian CV
+  - English CV
