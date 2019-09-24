@@ -1,4 +1,4 @@
 # my-resume
-In this repo you might find:
-  - Russian CV
-  - English CV
+This repo contains:
+  1) :sparkles: Russian CV :sparkles:
+  2) :sparkles: English CV :sparkles:
