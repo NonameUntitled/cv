@@ -1,5 +1,4 @@
-# My CV (with template)
+# My CV
 This repo contains:
-  1) :sparkles: Russian CV :sparkles:
-  2) :sparkles: English CV :sparkles:
-  3) :sparkles: CV Template :sparkles:
+  1) :sparkles: CV :sparkles:
+  2) :sparkles: CV sources :sparkles:
