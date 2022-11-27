@@ -10,6 +10,13 @@
 \usepackage{makeidx}
 \usepackage{wasysym}
 \usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{microtype}
+\usepackage{vwcol}
+\usepackage{tgbonum}
+\usepackage[dvipsnames]{xcolor}
+
+
 % basic part end
 
 \usepackage{multicol}
@@ -17,7 +24,14 @@
 \usepackage{hyperref}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 
-\author{Baykalov Vladimir}
+\setromanfont{LeagueSpartan}[
+    Path=./Font/,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-SemiBold
+    ]
+
+\author{Vladimir Baikalov}
 
 \setlength\columnsep{15mm}
 \setlength\parindent{0pt}
@@ -25,122 +39,133 @@
 
 \begin{document}
 
-\section*{\huge{Baikalov Vladimir}}
+\noindent
+\begin{minipage}[c]{0.66\linewidth}
+\Huge{\textbf{Vladimir Baikalov}}
 
-\par\hbox{\Large\textbf{Personal Information}}\kern3pt\hrule
-\begin{multicols}{2}
+\small{Machine Learning Engineer/Deep Learning Engineer}
+\end{minipage} % no space if you would like to put them side by side
+\begin{minipage}[c]{0.33\linewidth}
+\Letter: nonameuntitled159@gmail.com
 
-\hspace{5px}
-\Letter: Noname-Untitled@yandex.ru
-
-\hspace{5px}
 \faLinkedin : \href{https://www.linkedin.com/in/noname-untitled}{linkedin.com/in/noname-untitled}
-
-\par
 
 \faGithub:  \href{http://www.github.com/NonameUntitled}{github.com/NonameUntitled}
 
 \faSend:  \href{http://www.t.me/noname\_untitled}{t.me/noname\_untitled}
 
-\end{multicols}
+\end{minipage}
 
-\par\hbox{\Large\textbf{Education}}\kern5pt\hrule\kern10pt
+\par\hbox{\Large{\textcolor{Plum}{\textbf{Work experience}}}}\kern3pt\hrule\kern5pt
 
-\textbf{\large{Bachelor degree at ITMO University}}
+
+\textbf{\large{Deep Learning Engineer/}}\textcolor{Plum}{Google, YouTube.}
 \hfill
-\textbf{\underline{September 2017 - August 2021}}
+\textbf {\underline{Upcoming at January 2023}}
 
-\vspace{7px}
-\hspace{10px}
-Computer science major (Applied math and programming) \hfill \textbf{\large{GPA: 4.65/5.00}}
+Paris, France
 
-\vspace{5px}
-\hspace{10px}
-Thesis project: Implementing multi-agent policy-based algorithm for conveyor systems
+\vspace{2mm}
 
-\vspace{10px}
-\textbf{\large{Huawei Machine Learning course}}
+\textbf{\large{Deep Learning Engineer/}}\textcolor{Plum}{Yandex Technology.}
 \hfill
-\textbf{\underline{September 2019 - June 2020}}
+\textbf {\underline{August 2021 - Present}}
 
-\vspace{5px}
-\hspace{10px}
-Courses for computer science students at ITMO University
+Moscow, Russia
 
+\textbf{Relevant areas}: Transformers, Highload, Recommended Systems
+\begin{itemize}[label={}, left=10pt]
 
-\vspace{10px}
-\par\hbox{\Large\textbf{Professional experience}}\kern3pt\hrule\kern10pt
+    \item  Transferred ML model from experimental setup (Python, Pytorch) to production framework (C++, YNMT). Done weekly continuous fine tuning algorithm for production models in Yandex.Ads. \textbf{It was able to apply this process in production.}. This model \textbf{increased GMV metric up to 1.5\%}.
+    
+    \item Applied encoder-based models for improving personalized ads and search recommendations. Current solution \textbf{boosts production metric up to 6\%}.
+    
+    \item Implement multiprocessing python package (YtReader) for fast and convenient data preprocessing. Final solution reduced the time required for models training/evaluating \textbf{up to 5 times}. 
+\end{itemize}
 
-\textbf{\large{Huawei R\&D Dept. ITS Team. ML Engineer. Saint-Petersburg}}
+\textbf{\large{Machine Learning Engineer}}/\textcolor{Plum}{Huawei R\&D Dept.}
 \hfill
 \textbf {\underline{March 2020 - July 2021}}
 
-\vspace{5px}
-\textbf{Stack}: Python, OpenCV, PyTorch, Tensorflow, C++
+Saint-Petersburg, Russia
 
-\vspace{5px}
-\textbf{Relevant areas}: Object Detection/Tracking, Digital Sound Processing, Optical Character Recognition
-
+\textbf{Relevant areas}: Object Detection/Tracking, Digital Sound Processing, Optical Character Recognition.
 
 \begin{itemize}[label={}, left=10pt]
-    \item Algorithm for vehicles trajectories prediction using radar data only. This approach now is being used in a real-world application. Final solution \textbf{over-performs by 44\% better} than the previous algorithm
-
-    \item Car occupation algorithm for outdoor and underground parking lots based on detection and tracking algorithms. This solution was presented to the product team for further implementation in the product
-
-    \item Algorithm for the knuckle-knock sound pattern detection. Proposed architecture achieved \textbf{90\%} Precision and \textbf{95\%} Recall. With further touch sensors usage Precision was improved up to \textbf{94\%}
+    \item Algorithm for vehicles trajectories prediction using radar data only. This approach now is being used in a real-world application. Proposed solution \textbf{over-performs previous algorithm on 44\%}. 
+    
+    \item Car occupation algorithm for outdoor and underground parking lots based on detection and tracking algorithms. This solution was presented to the product team for further implementation in the product.
+    
+    \item Algorithm for the knuckle-knock sound pattern detection. Proposed architecture achieved \textbf{90\%} Precision and~\textbf{95\%} Recall. With touch sensors usage Precision was improved up to \textbf{94\%}.
 \end{itemize}
 
 
-\textbf{\large{Researcher at ITMO ML lab}}
+\textbf{\large{Researcher/}}\textcolor{Plum}{ITMO University, ML Lab}
 \hfill
 \textbf {\underline{September 2020 - July 2021}}
 
-\vspace{5px}
-\textbf{Stack}: Python, PyTorch
+Saint-Petersburg, Russia
 
-\vspace{5px}
-\textbf{Area of study}: Reinforcement Learning
+\textbf{Relevant areas}: Reinforcement Learning
 
 \begin{itemize}[label={}, left=10pt]
-    \item Developed multi-agent policy-based algorithm REM (Reinforce, Embedding, Monte-Carlo) for baggage handling system (BHS), which over-performs previous approaches. It was statistically proven with received \textbf{p-value less than~0.01}
-    \item The paper describing this research is in the process
+    \item Developed multi-agent policy-based algorithm \textbf{REM (Reinforce, Embedding, Monte-Carlo)} for baggage handling system (BHS), which over-performs previous approaches. This result was statistically proven with received \textbf{p-value less than~0.01}.
+    
+    \item The paper, 
+    \textbf{\href{https://aaltodoc.aalto.fi/handle/123456789/111642}{\enquote{Multi-Agent Deep Reinforcement Learning-Based Algorithm For Fast Generalization On Routing Problems}}},
+    with the partial description of this project, was \textbf{published on the YSC 2021 conference}. This project was held in the collaboration with Aalto University, Finland.
+    
 \end{itemize}
 
+\par\hbox{
+\Large{\textcolor{Plum}{\textbf{Education}}}
+}{\kern5pt\hrule\kern5pt}
 
-\textbf{\large{Lecturer at ITMO Academy}}
+\textbf{\large{Master degree/}}\textcolor{Plum}{Skoltech, DS major}
 \hfill
-\textbf{\underline{November 2019 - June 2020}}
-\begin{itemize}[label={}, left=10pt]
-    \item Lecturer at C/C++ courses for high school students
-\end{itemize}
+\textbf{\underline{September 2021 - Present}}
 
-\vspace{5px}
-\par\hbox{\Large\textbf{Technical skills}}\kern5pt\hrule
-\vspace{10px}
+Moscow, Russia \hfill Current GPA: 5.00/5.00
 
-\textbf{Proficient}:
+\hspace{6mm}
+Thesis project: Attention mechanism acceleration via tensor and matrix decompositions
 
-\hspace{10px} Python, C++, PyTorch, OpenCV
-\vspace{5px}
+\vspace{3mm}
 
-\textbf{Advanced}:
+\textbf{\large{Bachelor degree}}\textcolor{Plum}{/ITMO University, CS major}
+\hfill
+\textbf{\underline{September 2017 - August 2021}}
 
-\hspace{10px} Tensorflow, Keras, Git, Bash
-\vspace{5px}
+Saint-Petersburg, Russia \hfill GPA: 4.65/5.00
 
-\textbf{Experience with}:
+\hspace{6mm}
+Thesis project: Implementing multi-agent policy-based algorithm for conveyor systems
 
-\hspace{10px} Java, Kotlin, SQL, Haskell, Qt framework
-\vspace{10px}
+\vspace{3mm}
+\par\hbox{\Large{\textcolor{Plum}{\textbf{Skills}}}}\kern5pt\hrule
+\begin{multicols}{3}
 
-\par\hbox{\Large\textbf{Achievements}}\kern5pt\hrule
+\textbf{\large{Programming languages}}
 
-\vspace{7px}
-\hspace{10px}
-English : Level \textbf{C1 (Advanced)}. IELTS certified
+Proficient: Python, C++
 
-\vspace{7px}
-\hspace{10px}
-Got a Huawei scholarship for outstanding students in Machine Learning
+Advanced: Java, Bash, SQL
+
+\vspace{6mm}
+
+\textbf{\large{Technologies}}
+
+Proficient: Pytorch, OpenCV, Git
+
+Advanced: Tensorflow, PySpark
+
+\textbf{\large{Extra}}
+
+English: IELTS C1 Certified
+
+ICPC Contest Volunteering
+
+\end{multicols}
 
 \end{document}
+
