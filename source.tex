@@ -33,7 +33,7 @@
 
 \author{Vladimir Baikalov}
 
-\setlength\columnsep{15mm}
+\setlength\columnsep{10mm}
 \setlength\parindent{0pt}
 \pagenumbering{gobble}
 
@@ -43,8 +43,8 @@
 \begin{minipage}[c]{0.66\linewidth}
 \Huge{\textbf{Vladimir Baikalov}}
 
-\small{Machine Learning Engineer/Deep Learning Engineer}
-\end{minipage} % no space if you would like to put them side by side
+\small{R\&D Research Engineer / PhD Student}
+\end{minipage}
 \begin{minipage}[c]{0.33\linewidth}
 \Letter: nonameuntitled159@gmail.com
 
@@ -58,118 +58,143 @@
 
 \par\hbox{\Large{\textcolor{Plum}{\textbf{Work experience}}}}\kern3pt\hrule\kern5pt
 
-\textbf{\large{Machine Learning Engineer/}}\textcolor{Plum}{Google, YouTube.}
+\textbf{\large{Team lead R\&D RecSys Engineer/}}\textcolor{Plum}{Yandex Technologies}
 \hfill
-\textbf {\underline{January 2023 - Present}}
+\textbf {\underline{June 2024 - Present}}
 
-Paris, France
+\textbf{Relevant areas}: RecSys, Information Retrieval, Highload, Deep Learning
+
+{\leftskip=3mm
+    \vspace{2mm}
+
+    \textbf{Leading a team of three engineers}. Researching the application of e2e models instead of multi-stage classic recommender system pipeline. Investigating limitations and possibilities of applying semantic IDs for generating retrieval for stream music domain.
+
+    \vspace{2mm}
+    
+    Deployed retrieval and ranking models for Yandex.Lavka (e-commerce service). This model increased \textbf{GMV by 2.1\%}. 
+    
+    \vspace{2mm}
+    
+    Publications: 
+    
+    \hspace{3mm} Short paper \textbf{\enquote{\href{https://dl.acm.org/doi/abs/10.1145/3705328.3748033}{Correcting the LogQ Correction: Revisiting Sampled Softmax for Large-Scale Retrieval}}} -- Improving the LogQ correction presented at \textbf{Google, Deepmind}. Paper was accepted at RecSys'25
+    
+    \hspace{3mm} Full paper \textbf{\enquote{\href{https://arxiv.org/abs/2507.15994}{Scaling Recommender Transformers to One Billion Parameters}}} -- demonstrating scaling laws in recommender systems and presenting novel pretraining idea. 
+    
+    \hspace{3mm} Reproducibility paper \textbf{\enquote{\href{https://dl.acm.org/doi/abs/10.1145/3705328.3748163}{Yambda-5B — A Large-Scale Multi-Modal Dataset for Ranking and Retrieval}}}. The largest dataset of streaming music data. Paper was accepted at RecSys'25.
+    
+    \vspace{2mm}
+    
+    Competitions: 
+    
+    \hspace{3mm} With the team took the 4th place at RecSys'25 challenge. The solution \textbf{\enquote{\href{https://dl.acm.org/doi/full/10.1145/3758126.3758131}{Blending Sequential Embeddings, Graphs, and Engineered Features}}}. Paper was accepted at RecSys'25.
+    
+    \vspace{2mm}
+}
+
+\textbf{\large{Machine Learning Engineer/}}\textcolor{Plum}{Google, YouTube}
+\hfill
+\textbf {\underline{January 2023 - June 2024}}
 
 \textbf{Relevant areas}: Transformers, Highload, Large Language Models (LLMs)
 
-\begin{itemize}[label={}, left=10pt]
-    \item  Developed algorithm for video games detection for shorts. The final model achieved \textbf{4\% recall boost without precision drop} and allowed to \textbf{conduct fine-tune more frequently}.
-
-    \item Currently working on \textbf{deployment of LLMs} in the production including improvement of \textbf{re-training and distillation} pipelines. 
-
-\end{itemize}
-
-\vspace{2mm}
-
-\textbf{\large{Deep Learning Engineer/}}\textcolor{Plum}{Yandex Technology.}
+{\leftskip=3mm
+    \vspace{2mm}
+    
+    \hspace{3mm} Developed video games detection algorithm for shorts. The final model achieved \textbf{4\% recall boost without precision drop} and allowed to \textbf{conduct fine-tuning more frequently}. \textbf{Designed an end-to-end system} for serving this classifier, the solution is now being hosted by YouTube Gaming team.
+    
+    \vspace{2mm}
+    
+    \hspace{3mm} Worked on deployment of LLMs in production including improvement of \textbf{fine-tuning and distillation} pipelines.
+    
+    \vspace{2mm}
+}
+\textbf{\large{Deep Learning Engineer/}}\textcolor{Plum}{Yandex Technologies}
 \hfill
 \textbf {\underline{August 2021 - December 2022}}
 
-Moscow, Russia
+\textbf{Relevant areas}: RecSys, Information Retrieval, Highload, Deep Learning
 
-\textbf{Relevant areas}: Transformers, Highload, Recommended Systems
-\begin{itemize}[label={}, left=10pt]
 
-    \item  Transferred ML model from experimental setup (Python, Pytorch) to production framework (C++, YNMT). Supported weekly continuous finetuning process for in \textbf{Yandex.Ads}. \textbf{It was applied in production}. This model increased \textbf{GMV up to 1.5\%} and a number \textbf{of clicks up to 5\%}. The result is verified by AB tests and experiments.
+{\leftskip=3mm
+   
+    \vspace{2mm}
     
-    \item Applied encoder-based models for improving personalized ads and search recommendations. Current solution \textbf{boosts production metric up to 6\%}.
+    \hspace{3mm} Transferred an ML model from experimental setup (Python, PyTorch) to production framework (C++, YNMT).  Supported weekly continuous fine-tuning process for \textbf{Yandex.Ads}. \textbf{It is still being applied in production.} This model increased \textbf{GMV by up to 1.5\%} and \textbf{CTR by up to 5\%}. The result is verified by AB tests and experiments.
     
-    \item Implement multiprocessing Python package (YtReader) for fast and convenient data preprocessing. The final solution reduced the time required for models training/evaluating \textbf{up to 5 times}. 
-\end{itemize}
+    \vspace{2mm}
+        
+    \hspace{3mm} Applied encoder-based models for improving personalized ads and search recommendations. The current solution \textbf{boosts production metrics by up to 6\%}.
+    
+    \vspace{2mm}
+        
+    \hspace{3mm} Implemented multiprocessing Python package (YtReader) for fast and convenient data preprocessing. The final solution reduced the time required for model training/evaluation \textbf{by up to 5 times}.
+    
+    \vspace{2mm}
+}
 
 \textbf{\large{Machine Learning Engineer}}/\textcolor{Plum}{Huawei R\&D Dept.}
 \hfill
 \textbf {\underline{March 2020 - July 2021}}
 
-Saint-Petersburg, Russia
-
 \textbf{Relevant areas}: Object Detection/Tracking, Digital Sound Processing, Optical Character Recognition.
 
-\begin{itemize}[label={}, left=10pt]
-    \item Algorithm for vehicles trajectories prediction using radar data only. This approach now is being used in a real-world application. Proposed solution \textbf{over-performs the previous algorithm on 44\%}. 
+{\leftskip=3mm
+    \vspace{2mm}
     
-    \item Car occupation algorithm for outdoor and underground parking lots based on detection and tracking algorithms. This solution was presented to the product team for further implementation in the product.
+    \hspace{3mm} Algorithm for vehicles trajectories prediction using radar data only. This approach now is being used in a real-world application. Proposed solution \textbf{outperforms the previous algorithm by 44\%}. 
     
-    \item Algorithm for the knuckle-knock sound pattern detection. Proposed architecture achieved \textbf{90\%} Precision and~\textbf{95\%} Recall. With touch sensors usage Precision was improved up to \textbf{94\%}.
-\end{itemize}
-
-
-\textbf{\large{Researcher/}}\textcolor{Plum}{ITMO University, ML Lab}
-\hfill
-\textbf {\underline{September 2020 - July 2021}}
-
-Saint-Petersburg, Russia
-
-\textbf{Relevant areas}: Reinforcement Learning
-
-\begin{itemize}[label={}, left=10pt]
-    \item Developed multi-agent policy-based algorithm \textbf{REM (Reinforce, Embedding, Monte-Carlo)} for baggage handling system (BHS), which over-performs previous approaches. This result was statistically proven with received \textbf{p-value less than~0.01}.
+    \vspace{2mm}
     
-    \item The paper, \textbf{\href{https://aaltodoc.aalto.fi/handle/123456789/111642}{\enquote{Multi-Agent Deep Reinforcement Learning-Based Algorithm For Fast Generalization On Routing Problems}}},
-    with the partial description of this project, was \textbf{published on the YSC 2021 conference}. This project was held in \textbf{collaboration with Aalto University, Finland}.
-    
-\end{itemize}
+    \hspace{3mm} Algorithm for the knuckle-knock sound pattern detection. Proposed architecture achieved \textbf{90\%} Precision and~\textbf{95\%} Recall. With the usage of touch sensors precision was improved up to \textbf{94\%}.
+
+    \vspace{2mm}
+}
 
 \par\hbox{
 \Large{\textcolor{Plum}{\textbf{Education}}}
 }{\kern5pt\hrule\kern5pt}
 
+\textbf{\large{PhD student/}}\textcolor{Plum}{ITMO University, RecSys dept.}
+\hfill
+\textbf{\underline{September 2024 - Present}}
+
+\vspace{2mm}
+
+\hspace{3mm} Working on improving retrieval models by applying enhanced user/item representations.
+
+\vspace{2mm}
+
 \textbf{\large{Master degree/}}\textcolor{Plum}{Skoltech, DS major}
 \hfill
-\textbf{\underline{September 2021 - Present}}
+\textbf{\underline{September 2021 - July 2024}}
 
-Moscow, Russia \hfill Current GPA: 5.00/5.00
+\vspace{2mm}
 
-\hspace{6mm}
-Thesis project: Attention mechanism acceleration via tensor and matrix decompositions
+\hspace{3mm} \textbf{GPA: 4.5 / 5.0}. Thesis project: \href{https://arxiv.org/abs/2403.00895}{End-to-end Graph-Sequential Representation Learning for Accurate Recommendations}.
 
-\vspace{3mm}
+\vspace{2mm}
+
+\hspace{3mm} Publications: Short paper was accepted at \textbf{TheWebConf'24 conference (A*-tier)}, Singapore. 
+
+\vspace{2mm}
+
+\hspace{3mm} Received certificate of achievement \textbf{"Best Research Thesis"}.
+
+\vspace{2mm}
 
 \textbf{\large{Bachelor degree}}\textcolor{Plum}{/ITMO University, CS major}
 \hfill
 \textbf{\underline{September 2017 - August 2021}}
 
-Saint-Petersburg, Russia \hfill GPA: 4.65/5.00
+\vspace{2mm}
 
-\hspace{6mm}
-Thesis project: Implementing multi-agent policy-based algorithm for conveyor systems
+\hspace{3mm} \textbf{GPA: 4.7 / 5.0}. Developed multi-agent policy-based algorithm \textbf{REM (Reinforce, Embedding, Monte-Carlo)} for baggage handling system.
 
-\vspace{3mm}
-\par\hbox{\Large{\textcolor{Plum}{\textbf{Skills}}}}\kern5pt\hrule
-\begin{multicols}{3}
+\vspace{2mm}
 
-\textbf{\large{Programming languages}}
+\hspace{3mm} Publications: \textbf{\href{https://aaltodoc.aalto.fi/handle/123456789/111642}{\enquote{Multi-Agent Deep Reinforcement Learning-Based Algorithm For Fast Generalization On Routing Problems}}} was published at the \textbf{YSC 2021 conference}. This project was done in collaboration with \textbf{Aalto University, Finland}.
 
-Proficient: Python, C++
-
-Advanced: Java, Bash, SQL
-
-\textbf{\large{Technologies}}
-
-Proficient: Pytorch, Tensorflow
-
-Advanced: Airflow, PySpark
-
-\textbf{\large{Extra}}
-
-English: IELTS C1 Certified
-
-ICPC Contest Volunteering
-
-\end{multicols}
+\vspace{2mm}
 
 \end{document}
