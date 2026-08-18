@@ -1,28 +1,77 @@
 % basic part begin
-\documentclass[10pt,a4paper]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
-\usepackage[OT1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage[misc]{ifsym}
-\usepackage{makeidx}
-\usepackage{wasysym}
+\documentclass[12pt,a4paper]{extarticle}
+
+\usepackage{fontspec}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem}
 \usepackage{csquotes}
 \usepackage{microtype}
-\usepackage{vwcol}
-\usepackage{tgbonum}
-\usepackage[dvipsnames]{xcolor}
-
-
-% basic part end
-
-\usepackage{multicol}
 \usepackage{fontawesome}
 \usepackage{hyperref}
+\usepackage{enumitem}
+
+\usepackage[utf8]{inputenc}
+\usepackage[OT1]{fontenc}
+\usepackage[misc]{ifsym}
+\usepackage{makeidx}
+\usepackage{wasysym}
+\usepackage{vwcol}
+\usepackage{tgbonum}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{changepage}
+
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+% basic part end
+\usepackage{multicol}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+
+\newcommand{\cvsection}[1]{%
+    \vspace{1mm}
+    \par\noindent\hbox{\Large{\textcolor{Plum}
+    {\textbf{#1}}}}\vspace{2mm}\hrule\vspace{2mm}
+}
+
+\newcommand{\job}[4]{%
+    \textbf{\large{#1/}}\textcolor{Plum}{#2}\hfill\textbf{\underline{#3}}
+}
+
+\newcommand{\edu}[3]{%
+    \noindent\textbf{\large{#1/}}\textcolor{Plum}{#2}\hfill\textbf{\underline{#3}}
+}
+
+\newcommand{\pubfirst}[3]{%
+    \vspace{1mm}
+    \noindent
+    \begin{minipage}[t]{24mm}
+        \textbf{\large #1}
+    \end{minipage}%
+    \hspace{3mm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-30mm\relax}
+        {\large\textbf{#2}}\par
+        \vspace{0.8mm}
+        #3
+    \end{minipage}
+    \par\vspace{3mm}
+}
+\newcommand{\pubnext}[2]{%
+    \noindent
+    \hspace*{27mm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-33mm\relax}
+        {\large\textbf{#1}}\par
+        \vspace{0.8mm}
+        #2
+    \end{minipage}
+    \par\vspace{3mm}
+}
+
 
 \setromanfont{LeagueSpartan}[
     Path=./Font/,
@@ -40,161 +89,203 @@
 \begin{document}
 
 \noindent
-\begin{minipage}[c]{0.66\linewidth}
-\Huge{\textbf{Vladimir Baikalov}}
+\begin{minipage}[c]{0.65\linewidth}
+\Huge\textbf{Vladimir Baikalov}
 
-\small{R\&D Research Engineer / PhD Student}
-\end{minipage}
-\begin{minipage}[c]{0.33\linewidth}
-\Letter: nonameuntitled159@gmail.com
+\small{Research Engineer}
 
-\faLinkedin : \href{https://www.linkedin.com/in/noname-untitled}{linkedin.com/in/noname-untitled}
-
-\faGithub:  \href{http://www.github.com/NonameUntitled}{github.com/NonameUntitled}
-
-\faSend:  \href{http://www.t.me/noname\_untitled}{t.me/noname\_untitled}
+\small{Generative Retrieval, Continual Learning, Foundation Recommender Systems}
 
 \end{minipage}
+\begin{minipage}[c]{0.35\linewidth}
+\raggedleft
 
-\par\hbox{\Large{\textcolor{Plum}{\textbf{Work experience}}}}\kern3pt\hrule\kern5pt
+\href{mailto:nonameuntitled159@gmail.com}{nonameuntitled159@gmail.com}\\
 
-\textbf{\large{Team lead R\&D RecSys Engineer/}}\textcolor{Plum}{Yandex Technologies}
-\hfill
-\textbf {\underline{June 2024 - Present}}
+\href{https://www.linkedin.com/in/noname-untitled}{linkedin.com/in/noname-untitled}\\
 
-\textbf{Relevant areas}: RecSys, Information Retrieval, Highload, Deep Learning
+\href{http://www.github.com/NonameUntitled}{github.com/NonameUntitled}
+
+\href{https://scholar.google.com/citations?user=VNlOjZEAAAAJ}{\underline{Google Scholar Link}}
+
+\end{minipage}
+
+\vspace{2mm}
+
+\cvsection{Profile}
+
+Research engineer building foundation-scale generative recommender and search/retrieval systems that integrate multimodal signals, adapt under non-stationarity, and optimize long-horizon user outcomes.
+
+\vspace{2mm}
+
+5+ years of production ML experience across Google/YouTube, Yandex, AI VK, and Huawei, taking models from research prototypes to large-scale deployment. PhD candidate with publications at WWW, RecSys, SIGIR, KDD.
+
+\vspace{2mm}
+
+\textbf{Skills}: Python, C++, PyTorch, JAX, TensorFlow, Distributed ML, GPU Acceleration, Large-Scale Data Pipelines, Docker, Kubernetes.
+
+\vspace{2mm}
+
+\textbf{Research Interests}: Generative Retrieval, Foundation RecSys, World Models, Bayesian Statistics, Continual Learning, Offline RL, Long-Term Objectives, Multimodal Representation Learning.
+
+\vspace{1mm}
+
+\cvsection{Work experience}
+
+\job{Lead RecSys Scientist}{AI VK}{Dec 2025 -- Present}
+
+\begin{itemize}[itemsep=0.0mm, topsep=1mm]
+
+    \item Leading research on foundation recommender systems for a large video platform, with a focus on generative retrieval, continual semantic updates, and reward-aware long-horizon optimization.
+    
+    \item Co-authored two research works on adaptive generative recommendation: mitigating Semantic ID staleness in generative retrieval and off-policy optimization for long-horizon objectives in large action spaces.
+
+    \item Developing generative retrieval models for video service and preparing an online A/B test in collaboration with the product team.
+
+    \item Developing a unified recommender foundation model that combines generative modeling, LLM $\times$ RecSys, and reward-aware training.
+    
+\end{itemize}
+
+\vspace{2mm}
+
+\job{Lead, R\&D RecSys Team}{Yandex Technologies}{Jun 2024 -- Nov 2025}
+
+\begin{itemize}[itemsep=0.0mm, topsep=1mm]
+    
+    \item Led a three-person R\&D team building generative end-to-end recommender models on semantic IDs as an alternative to classic multi-stage retrieval/ranking pipelines.
+
+    \item Co-developed Argus, increasing Total Listening Time at Yandex.Music by +2.26\% It was later adapted to other Yandex products (e.g., e-commerce +1.7\% GMV, food-tech services +2.1\% GMV).
+
+    \item Full-stack AI engineer: Owned entire end-to-end ML pipeline from data collection to inference. Built data collection, training, evaluation, and deployment for retrieval \& ranking models.
+    
+\end{itemize}
+
+\vspace{2mm}
+
+\job{Machine Learning Engineer}{Google, YouTube}{Jan 2023 -- Jun 2024}
+
+\begin{itemize}[itemsep=0.0mm, topsep=1mm]
+    \item Developed and launched a detection model for \textbf{YouTube Shorts}, improving recall by 4\% without precision degradation and enabling more frequent fine-tuning of content-quality pipelines.
+
+    \item Designed an end-to-end serving system for this classifier in collaboration with the \textbf{YouTube Gaming} team, taking the model from research prototype to production deployment.
+
+    \item Worked on production deployment of LLM-based systems, including improvements to fine-tuning and distillation pipelines for large models.
+
+    \item Built ML systems under \textbf{Google engineering practices}, including design/code reviews, production reliability constraints, and cross-team collaboration on large codebases.
+    
+\end{itemize}
+
+\vspace{2mm}
+
+\job{Deep Learning Engineer}{Yandex Technologies}{Aug 2021 -- Dec 2022}
+
+\begin{itemize}[itemsep=0.0mm, topsep=1mm]
+    \item Ported a research PyTorch model into a production C++ ML framework for Ads, increasing GMV by up to 1.5\% and CTR by up to 5\%.
+
+    \item Built a distributed parallel data-processing pipeline, improving GPU utilization by up to 2.5 times.
+    
+\end{itemize}
+
+\vspace{2mm}
+
+\job{Machine Learning Engineer}{Huawei R\&D Dept.}{Mar 2020 -- Jun 2021}
+
+\vspace{1mm}
+
+\cvsection{Education}
+
+\edu{PhD Student}{ITMO University}{Sep 2024 -- Present}
 
 {\leftskip=3mm
-    \vspace{2mm}
+    
+    Research: Methods for training, scaling, and updating representations in generative recommender systems. 
 
-    \textbf{Leading a team of three engineers}. Researching the application of e2e models instead of multi-stage classic recommender system pipeline. Investigating limitations and possibilities of applying semantic IDs for generating retrieval for stream music domain.
-
-    \vspace{2mm}
-    
-    Deployed retrieval and ranking models for Yandex.Lavka (e-commerce service). This model increased \textbf{GMV by 2.1\%}. 
-    
-    \vspace{2mm}
-    
-    Publications: 
-    
-    \hspace{3mm} Short paper \textbf{\enquote{\href{https://dl.acm.org/doi/abs/10.1145/3705328.3748033}{Correcting the LogQ Correction: Revisiting Sampled Softmax for Large-Scale Retrieval}}} -- Improving the LogQ correction presented at \textbf{Google, Deepmind}. Paper was accepted at RecSys'25
-    
-    \hspace{3mm} Full paper \textbf{\enquote{\href{https://arxiv.org/abs/2507.15994}{Scaling Recommender Transformers to One Billion Parameters}}} -- demonstrating scaling laws in recommender systems and presenting novel pretraining idea. 
-    
-    \hspace{3mm} Reproducibility paper \textbf{\enquote{\href{https://dl.acm.org/doi/abs/10.1145/3705328.3748163}{Yambda-5B — A Large-Scale Multi-Modal Dataset for Ranking and Retrieval}}}. The largest dataset of streaming music data. Paper was accepted at RecSys'25.
-    
-    \vspace{2mm}
-    
-    Competitions: 
-    
-    \hspace{3mm} With the team took the 4th place at RecSys'25 challenge. The solution \textbf{\enquote{\href{https://dl.acm.org/doi/full/10.1145/3758126.3758131}{Blending Sequential Embeddings, Graphs, and Engineered Features}}}. Paper was accepted at RecSys'25.
-    
     \vspace{2mm}
 }
 
-\textbf{\large{Machine Learning Engineer/}}\textcolor{Plum}{Google, YouTube}
-\hfill
-\textbf {\underline{January 2023 - June 2024}}
 
-\textbf{Relevant areas}: Transformers, Highload, Large Language Models (LLMs)
+
+\edu{Master Degree}{Skoltech, DS major}{Sep 2021 -- Jul 2024}
 
 {\leftskip=3mm
-    \vspace{2mm}
-    
-    \hspace{3mm} Developed video games detection algorithm for shorts. The final model achieved \textbf{4\% recall boost without precision drop} and allowed to \textbf{conduct fine-tuning more frequently}. \textbf{Designed an end-to-end system} for serving this classifier, the solution is now being hosted by YouTube Gaming team.
-    
-    \vspace{2mm}
-    
-    \hspace{3mm} Worked on deployment of LLMs in production including improvement of \textbf{fine-tuning and distillation} pipelines.
-    
-    \vspace{2mm}
-}
-\textbf{\large{Deep Learning Engineer/}}\textcolor{Plum}{Yandex Technologies}
-\hfill
-\textbf {\underline{August 2021 - December 2022}}
 
-\textbf{Relevant areas}: RecSys, Information Retrieval, Highload, Deep Learning
-
-
-{\leftskip=3mm
-   
-    \vspace{2mm}
-    
-    \hspace{3mm} Transferred an ML model from experimental setup (Python, PyTorch) to production framework (C++, YNMT).  Supported weekly continuous fine-tuning process for \textbf{Yandex.Ads}. \textbf{It is still being applied in production.} This model increased \textbf{GMV by up to 1.5\%} and \textbf{CTR by up to 5\%}. The result is verified by AB tests and experiments.
-    
-    \vspace{2mm}
-        
-    \hspace{3mm} Applied encoder-based models for improving personalized ads and search recommendations. The current solution \textbf{boosts production metrics by up to 6\%}.
-    
-    \vspace{2mm}
-        
-    \hspace{3mm} Implemented multiprocessing Python package (YtReader) for fast and convenient data preprocessing. The final solution reduced the time required for model training/evaluation \textbf{by up to 5 times}.
-    
-    \vspace{2mm}
-}
-
-\textbf{\large{Machine Learning Engineer}}/\textcolor{Plum}{Huawei R\&D Dept.}
-\hfill
-\textbf {\underline{March 2020 - July 2021}}
-
-\textbf{Relevant areas}: Object Detection/Tracking, Digital Sound Processing, Optical Character Recognition.
-
-{\leftskip=3mm
-    \vspace{2mm}
-    
-    \hspace{3mm} Algorithm for vehicles trajectories prediction using radar data only. This approach now is being used in a real-world application. Proposed solution \textbf{outperforms the previous algorithm by 44\%}. 
-    
-    \vspace{2mm}
-    
-    \hspace{3mm} Algorithm for the knuckle-knock sound pattern detection. Proposed architecture achieved \textbf{90\%} Precision and~\textbf{95\%} Recall. With the usage of touch sensors precision was improved up to \textbf{94\%}.
+    Honors Thesis: Enhancing recommender systems performance with multiple data representations.
 
     \vspace{2mm}
 }
 
-\par\hbox{
-\Large{\textcolor{Plum}{\textbf{Education}}}
-}{\kern5pt\hrule\kern5pt}
+\edu{Bachelor Degree}{ITMO University, CS major}{Sep 2017 -- Aug 2021}
 
-\textbf{\large{PhD student/}}\textcolor{Plum}{ITMO University, RecSys dept.}
-\hfill
-\textbf{\underline{September 2024 - Present}}
+{\leftskip=3mm
+
+    Thesis: Application of Multi-Agent Routing Algorithms Based on Policy Optimization.
+
+    \vspace{2mm}
+}
+
+\cvsection{Publications}
+
+\vspace{1mm}
+
+\pubfirst{KDD'26}
+{\href{https://arxiv.org/abs/2507.15994}{Scaling Recommender Transformers to One Billion Parameters}}
+{Kirill Khrylchenko, Artem Matveev, Sergei Makeev, \underline{Vladimir Baikalov}}
+
+\pubnext
+{\href{https://arxiv.org/abs/2607.02818}{Long-Term Optimization for Large-Scale Generative Retrieval with Off-Policy REINFORCE}}
+{Artem Matveev, Sergei Makeev, Aleksei Krasilnikov, \underline{Vladimir Baikalov}, Sergei Liamaev, Kirill Khrylchenko}
+
+\pubfirst{SIGIR'26}
+{\href{https://arxiv.org/abs/2604.13273}{Mitigating Collaborative Semantic ID Staleness in Generative Retrieval}}
+{\underline{Vladimir Baikalov}, Iskander Bagautdinov, Sergey Muravyov}
+
+\pubfirst{RecSys'25}
+{\href{https://dl.acm.org/doi/abs/10.1145/3705328.3748033}{Correcting the LogQ Correction: Revisiting Sampled Softmax for Large-Scale Retrieval}}
+{Kirill Khrylchenko, \underline{Vladimir Baikalov}, Sergei Makeev, Artem Matveev, Sergei Liamaev}
+
+\pubnext
+{\href{https://dl.acm.org/doi/abs/10.1145/3705328.3748163}{Yambda-5B: A Large-Scale Multi-Modal Dataset for Ranking and Retrieval}}
+{Alexander Ploshkin, Vladislav Tytskiy, Alexey Pismenny, \underline{Vladimir Baikalov}, Evgeny Taychinov, Artem Permiakov, Daniil Burlakov, Eugene Krofto}
+
+\pubnext
+{\href{https://dl.acm.org/doi/full/10.1145/3758126.3758131}{Blending Sequential Embeddings, Graphs, and Engineered Features: 4th Place Solution in RecSys Challenge 2025}}
+{Sergei Makeev, Alexandr Andreev, \underline{Vladimir Baikalov}, Vladislav Tytskiy, Aleksei Krasilnikov, Kirill Khrylchenko}
+
+\pubfirst{WWW'24}
+{\href{https://arxiv.org/abs/2403.00895}{End-to-End Graph-Sequential Representation Learning for Accurate Recommendations}}
+{\underline{Vladimir Baikalov}, Evgeny Frolov}
+
+\pubfirst{Elsevier'21}
+{\href{https://aaltodoc.aalto.fi/handle/123456789/111642}{Multi-Agent Deep Reinforcement Learning-Based Algorithm for Fast Generalization on Routing Problems}}
+{Ibraheem Barbahan, \underline{Vladimir Baikalov}, Valeriy Vyatkin, Andrey Filchenkov}
+
+\vspace{1mm}
+
+\cvsection{Teaching Experience}
+
+\textbf{\large{Teaching Assistant/}}\textcolor{Plum}{Yandex School of Data Analysis (YSDA)}\hfill\textbf{\underline{2024 -- 2026}}
+
+Recommender System Course.
+\textcolor{Blue}{\underline{\href{https://github.com/yandexdataschool/recsys_course}{GitHub link (140+ stars)}}}
 
 \vspace{2mm}
 
-\hspace{3mm} Working on improving retrieval models by applying enhanced user/item representations.
+\textbf{\large{Teaching Assistant/}}\textcolor{Plum}{Higher School of Economics}\hfill\textbf{\underline{2025 -- 2026}}
+
+Recommender System Course. \textcolor{Blue}{
+\underline{
+\href{https://github.com/KhrylchenkoKirill/DeepRecSys}{GitHub link (90+ stars)}
+}
+}
 
 \vspace{2mm}
 
-\textbf{\large{Master degree/}}\textcolor{Plum}{Skoltech, DS major}
-\hfill
-\textbf{\underline{September 2021 - July 2024}}
+\textbf{\large{Lecturer/}}\textcolor{Plum}{ITMO University}\hfill\textbf{\underline{2024 -- 2026}}
 
-\vspace{2mm}
+Taught Programming Massively Parallel Processors.
 
-\hspace{3mm} \textbf{GPA: 4.5 / 5.0}. Thesis project: \href{https://arxiv.org/abs/2403.00895}{End-to-end Graph-Sequential Representation Learning for Accurate Recommendations}.
+Topics include: GPU architecture, CUDA, Triton, Kernels, Inference Acceleration, Large-Scale Deep Learning.
 
-\vspace{2mm}
-
-\hspace{3mm} Publications: Short paper was accepted at \textbf{TheWebConf'24 conference (A*-tier)}, Singapore. 
-
-\vspace{2mm}
-
-\hspace{3mm} Received certificate of achievement \textbf{"Best Research Thesis"}.
-
-\vspace{2mm}
-
-\textbf{\large{Bachelor degree}}\textcolor{Plum}{/ITMO University, CS major}
-\hfill
-\textbf{\underline{September 2017 - August 2021}}
-
-\vspace{2mm}
-
-\hspace{3mm} \textbf{GPA: 4.7 / 5.0}. Developed multi-agent policy-based algorithm \textbf{REM (Reinforce, Embedding, Monte-Carlo)} for baggage handling system.
-
-\vspace{2mm}
-
-\hspace{3mm} Publications: \textbf{\href{https://aaltodoc.aalto.fi/handle/123456789/111642}{\enquote{Multi-Agent Deep Reinforcement Learning-Based Algorithm For Fast Generalization On Routing Problems}}} was published at the \textbf{YSC 2021 conference}. This project was done in collaboration with \textbf{Aalto University, Finland}.
-
-\vspace{2mm}
+\vspace{1mm}
 
 \end{document}
